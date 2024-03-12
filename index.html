@@ -1,1 +1,59 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Maintenance</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #0066cc;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+
+        .notice {
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>The Site is Under Maintenance</h1>
+    <p>We're currently working on making our website better.</p>
+    <p>We apologize for the inconvenience.</p>
+    <p>Please check back later.</p>
+    <p><span id="time"></span></p>
+    <p class="notice">Thank you for your patience!</p>
+</div>
+
+<script>
+    function updateTime() {
+        const now = new Date();
+        document.getElementById('time').textContent = now.toLocaleString();
+    }
+
+    setInterval(updateTime, 1000);
+</script>
+</body>
+</html>
+
