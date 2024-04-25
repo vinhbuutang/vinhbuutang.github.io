@@ -7,13 +7,8 @@
 <body>
     <script>
         // JavaScript to handle the redirect
-        document.addEventListener('DOMContentLoaded', function () {
-            // Extract the path from the current URL
-            const path = location.pathname;
-            console.log(path)
-            // Redirect to the homepage and append the path
-            window.location.href = path;
-        });
+        localStorage.setItem('NOT_FOUND_PATH', window.location.pathname);
+        window.location.replace('/index.html')
     </script>
 </body>
 </html>
